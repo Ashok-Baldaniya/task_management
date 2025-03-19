@@ -2,7 +2,9 @@ import { Router } from 'express';
 import { loginUser } from '../controller/auth.controller.js';
 import { validateRequest } from '../middlewares/validation.middleware.js';
 import { loginSchema } from '../utils/validator/user.schema.js';
+import { createRequire } from 'module';
 
+const require = createRequire(import.meta.url);
 
 /**
  * @swagger
